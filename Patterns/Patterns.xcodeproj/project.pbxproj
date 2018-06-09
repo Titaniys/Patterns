@@ -13,6 +13,7 @@
 		DDA94C5920C9CF4800289D95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA94C5820C9CF4800289D95 /* Assets.xcassets */; };
 		DDA94C5C20C9CF4800289D95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA94C5A20C9CF4800289D95 /* LaunchScreen.storyboard */; };
 		DDA94C6420CBFDCE00289D95 /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA94C6320CBFDCE00289D95 /* Prototype.swift */; };
+		DDA94C6620CC079100289D95 /* FactoryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA94C6520CC079100289D95 /* FactoryMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DDA94C5B20C9CF4800289D95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA94C5D20C9CF4900289D95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDA94C6320CBFDCE00289D95 /* Prototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
+		DDA94C6520CC079100289D95 /* FactoryMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				DDA94C5120C9CF4600289D95 /* AppDelegate.swift */,
 				DDA94C6320CBFDCE00289D95 /* Prototype.swift */,
+				DDA94C6520CC079100289D95 /* FactoryMethod.swift */,
 				DDA94C5320C9CF4600289D95 /* ViewController.swift */,
 				DDA94C5520C9CF4600289D95 /* Main.storyboard */,
 				DDA94C5820C9CF4800289D95 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				DDA94C5420C9CF4600289D95 /* ViewController.swift in Sources */,
 				DDA94C5220C9CF4600289D95 /* AppDelegate.swift in Sources */,
 				DDA94C6420CBFDCE00289D95 /* Prototype.swift in Sources */,
+				DDA94C6620CC079100289D95 /* FactoryMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

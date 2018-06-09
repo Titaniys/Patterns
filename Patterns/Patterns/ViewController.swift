@@ -16,6 +16,13 @@ class ViewController: UIViewController {
 		let prototype = Prototype()
 		prototype.prototypeExample()
 		
+		
+		let productGen = ProductGenerator()
+		productGen.saveExpenses(100)
+		productGen.saveExpenses(1)
+		productGen.saveExpenses(0)
+		productGen.saveExpenses(200)
+		
 	}
 
 
