@@ -23,8 +23,22 @@ class ViewController: UIViewController {
 		productGen.saveExpenses(0)
 		productGen.saveExpenses(200)
 		
+		exampleAbstractFactory()
 	}
 
 
+	func exampleAbstractFactory() {
+		
+		let abstractFactory = AbstractFactory()
+		abstractFactory.isThirdWorld = true
+		
+		let factory = abstractFactory.getFactory()
+		let genIphone = factory.getIphone()
+		let genIpad = factory.getIpad()
+		
+		print("china:", genIphone.osName!, genIphone.productName!)
+		print("chinaIpad:", genIpad.osName!, genIpad.productName!, genIpad.screenSize!)
+		
+	}
 }
 
