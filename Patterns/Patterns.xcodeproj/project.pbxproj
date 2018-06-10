@@ -15,6 +15,7 @@
 		DDA94C6420CBFDCE00289D95 /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA94C6320CBFDCE00289D95 /* Prototype.swift */; };
 		DDA94C6620CC079100289D95 /* FactoryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA94C6520CC079100289D95 /* FactoryMethod.swift */; };
 		DDA94C6820CC2B5100289D95 /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA94C6720CC2B5100289D95 /* AbstractFactory.swift */; };
+		DDA94C6A20CC88A200289D95 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA94C6920CC88A200289D95 /* Builder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DDA94C6320CBFDCE00289D95 /* Prototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
 		DDA94C6520CC079100289D95 /* FactoryMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryMethod.swift; sourceTree = "<group>"; };
 		DDA94C6720CC2B5100289D95 /* AbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractFactory.swift; sourceTree = "<group>"; };
+		DDA94C6920CC88A200289D95 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,12 @@
 		DDA94C5020C9CF4600289D95 /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				DDA94C5320C9CF4600289D95 /* ViewController.swift */,
 				DDA94C5120C9CF4600289D95 /* AppDelegate.swift */,
 				DDA94C6320CBFDCE00289D95 /* Prototype.swift */,
 				DDA94C6520CC079100289D95 /* FactoryMethod.swift */,
 				DDA94C6720CC2B5100289D95 /* AbstractFactory.swift */,
-				DDA94C5320C9CF4600289D95 /* ViewController.swift */,
+				DDA94C6920CC88A200289D95 /* Builder.swift */,
 				DDA94C5520C9CF4600289D95 /* Main.storyboard */,
 				DDA94C5820C9CF4800289D95 /* Assets.xcassets */,
 				DDA94C5A20C9CF4800289D95 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 				DDA94C6820CC2B5100289D95 /* AbstractFactory.swift in Sources */,
 				DDA94C6420CBFDCE00289D95 /* Prototype.swift in Sources */,
 				DDA94C6620CC079100289D95 /* FactoryMethod.swift in Sources */,
+				DDA94C6A20CC88A200289D95 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
