@@ -10,5 +10,8 @@ import UIKit
 
 class Singleton: NSObject {
 
-
+	static let singleton = Singleton()
+	
+	var name : String?
 }
+

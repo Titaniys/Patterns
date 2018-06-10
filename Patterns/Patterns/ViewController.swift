@@ -13,21 +13,14 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let prototype = Prototype()
-		prototype.prototypeExample()
+		let shared = Singleton.singleton
+		shared.name = "one"
+		print(shared.name!)
+		let sharedTwo = shared
 		
-		
-		let productGen = ProductGenerator()
-		productGen.saveExpenses(100)
-		productGen.saveExpenses(1)
-		productGen.saveExpenses(0)
-		productGen.saveExpenses(200)
-		
-		exampleAbstractFactory()
-		
-		let builder = Builder()
-		builder.example()
-		
+		shared.name = "two"
+		print(shared.name!)
+		print(sharedTwo.name!)
 	}
 
 
