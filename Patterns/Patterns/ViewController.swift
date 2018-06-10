@@ -13,14 +13,14 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let shared = Singleton.singleton
-		shared.name = "one"
-		print(shared.name!)
-		let sharedTwo = shared
+		let bird = Bird()
+		let raven = Raven()
+		let ravenAdapter = RavenAdapter().initWithRaven(raven)
 		
-		shared.name = "two"
-		print(shared.name!)
-		print(sharedTwo.name!)
+		let adapter = Adapter()
+		adapter.makeTheBirdTest(bird)
+		adapter.makeTheBirdTest(ravenAdapter)
+		
 	}
 
 
