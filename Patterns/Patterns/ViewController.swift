@@ -24,6 +24,8 @@ class ViewController: UIViewController {
 		AdapterDifficult.example()
 		
 		Bridge.example()
+		
+		Facade.example()
 	}
 
 

@@ -20,6 +20,7 @@
 		DDA94C6E20CD949500289D95 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA94C6D20CD949500289D95 /* Adapter.swift */; };
 		DDA94C7020CDC8EB00289D95 /* AdapterDifficult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA94C6F20CDC8EB00289D95 /* AdapterDifficult.swift */; };
 		DDA94C7220CEC7FD00289D95 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA94C7120CEC7FD00289D95 /* Bridge.swift */; };
+		DDA94C7420CED0DD00289D95 /* Facade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA94C7320CED0DD00289D95 /* Facade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DDA94C6D20CD949500289D95 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		DDA94C6F20CDC8EB00289D95 /* AdapterDifficult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterDifficult.swift; sourceTree = "<group>"; };
 		DDA94C7120CEC7FD00289D95 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		DDA94C7320CED0DD00289D95 /* Facade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				DDA94C6D20CD949500289D95 /* Adapter.swift */,
 				DDA94C6F20CDC8EB00289D95 /* AdapterDifficult.swift */,
 				DDA94C7120CEC7FD00289D95 /* Bridge.swift */,
+				DDA94C7320CED0DD00289D95 /* Facade.swift */,
 				DDA94C5520C9CF4600289D95 /* Main.storyboard */,
 				DDA94C5820C9CF4800289D95 /* Assets.xcassets */,
 				DDA94C5A20C9CF4800289D95 /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 				DDA94C6E20CD949500289D95 /* Adapter.swift in Sources */,
 				DDA94C6C20CD6BC400289D95 /* Singleton.swift in Sources */,
 				DDA94C5220C9CF4600289D95 /* AppDelegate.swift in Sources */,
+				DDA94C7420CED0DD00289D95 /* Facade.swift in Sources */,
 				DDA94C6820CC2B5100289D95 /* AbstractFactory.swift in Sources */,
 				DDA94C6420CBFDCE00289D95 /* Prototype.swift in Sources */,
 				DDA94C6620CC079100289D95 /* FactoryMethod.swift in Sources */,
