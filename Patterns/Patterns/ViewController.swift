@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 		adapter.makeTheBirdTest(bird)
 		adapter.makeTheBirdTest(ravenAdapter)
 		
+		AdapterDifficult.example()
 	}
 
 
