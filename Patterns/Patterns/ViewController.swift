@@ -13,19 +13,11 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let bird = Bird()
-		let raven = Raven()
-		let ravenAdapter = RavenAdapter().initWithRaven(raven)
-		
-		let adapter = Adapter()
-		adapter.makeTheBirdTest(bird)
-		adapter.makeTheBirdTest(ravenAdapter)
-		
-		AdapterDifficult.example()
-		
-		Bridge.example()
-		
-		Facade.example()
+        let app = LoggisticApp()
+
+        app.example(distance: 900)
+        app.example(distance: 1100)
+        app.example(distance: 1000)
 	}
 
 

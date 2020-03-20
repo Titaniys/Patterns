@@ -22,23 +22,23 @@ class AbstractFactory: NSObject {
 }
 
 protocol PhoneFactory{
-	func getIphone() -> GenericIphone
-	func getIpad() -> GenericIpad
+	func getIphone() -> Iphone
+	func getIpad() -> Ipad
 }
 
-class GenericIphone: NSObject {
+class Iphone {
 	var osName : String?
 	var productName : String?
 }
 
-class GenericIpad: NSObject {
+class Ipad {
 	var osName : String?
 	var productName : String?
 	var screenSize : Int?
 }
 
 
-class AppleIphone: GenericIphone {
+class AppleIphone: Iphone {
 	override init() {
 		super.init()
 		self.osName = "ios11"
@@ -46,7 +46,7 @@ class AppleIphone: GenericIphone {
 	}
 }
 
-class AppleIpad: GenericIpad {
+class AppleIpad: Ipad {
 	override init() {
 		super.init()
 		self.osName = "ios10"
@@ -55,7 +55,7 @@ class AppleIpad: GenericIpad {
 	}
 }
 
-class ChinaIphone: GenericIphone {
+class ChinaIphone: Iphone {
 	override init() {
 		super.init()
 		self.osName = "Android"
@@ -63,7 +63,7 @@ class ChinaIphone: GenericIphone {
 	}
 }
 
-class ChinaIpad: GenericIpad {
+class ChinaIpad: Ipad {
 	override init() {
 		super.init()
 		self.osName = "Windows CE"
@@ -73,24 +73,24 @@ class ChinaIpad: GenericIpad {
 }
 
 class AppleFactory: PhoneFactory {
-	func getIphone() -> GenericIphone {
+	func getIphone() -> Iphone {
 		let iphone = AppleIphone()
 		return iphone
 	}
 	
-	func getIpad() -> GenericIpad {
+	func getIpad() -> Ipad {
 		let ipad = AppleIpad()
 		return ipad
 	}
 }
 
 class ChinaFactory: PhoneFactory {
-	func getIphone() -> GenericIphone {
+	func getIphone() -> Iphone {
 		let chinaIphone = ChinaIphone()
 		return chinaIphone
 	}
 	
-	func getIpad() -> GenericIpad {
+	func getIpad() -> Ipad {
 		let chinaIpad = ChinaIpad()
 		return chinaIpad
 	}

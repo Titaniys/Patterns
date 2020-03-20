@@ -8,62 +8,60 @@
 
 import UIKit
 
-class FactoryMethod: NSObject {
-
+protocol Loggistic {
+    func sendMail() -> Transport
+    func startLoggistic()
 }
 
-class Product: NSObject {
-	var name : NSString?
-	var price : Int?
-	
-	func getPriceTotalPrice(_ sum : Int) -> Int {
-		if let price = price {
-			return price + sum
-		}
-		return sum
-	}
-	
-	func saveObject()  {
-		print("I am saving an object in to product database")
-	}
+extension Loggistic {
+    func startLoggistic() {
+        let transport = sendMail()
+        transport.move()
+    }
 }
 
-
-class Toy: Product {
-	override func saveObject() {
-		print("I am saving a toy in to product database")
-	}
+class PlaneLoggistic: Loggistic {
+    func sendMail() -> Transport {
+        return Plane()
+    }
 }
 
-
-class Dress: Product {
-	override func saveObject() {
-		print("I am saving a dress in to product database")
-	}
+class TruckLoggistic: Loggistic {
+    func sendMail() -> Transport {
+        return Truck()
+    }
 }
 
+protocol Transport {
+    func move()
+}
 
-class ProductGenerator: NSObject {
-	
-	func getProduct(_ inputPrice: Int) -> Product? {
-		
-		if (inputPrice < 100 && inputPrice > 0) {
-			let toy = Toy()
-			return toy
-		} else if inputPrice >= 100 {
-			let dress = Dress()
-			return dress
-		}
-		return nil
-	}
-	
-	func saveExpenses(_ inputPrice: Int) {
-		let pg = ProductGenerator()
-		let product = pg.getProduct(inputPrice)
-		
-		product?.saveObject()
-	}
+class Plane: Transport {
+    func move() {
+        print("fly")
+    }
+}
+
+class Truck: Transport {
+    func move() {
+        print("go!")
+    }
 }
 
 
 
+class LoggisticApp {
+
+    var loggistic: Loggistic?
+    // if distance < 1000 -> Truck else Plane
+    func example(distance: Int) {
+
+        if distance < 1000 {
+            loggistic = TruckLoggistic()
+        } else {
+            loggistic = PlaneLoggistic()
+        }
+
+        loggistic?.startLoggistic()
+    }
+}
