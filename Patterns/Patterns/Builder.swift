@@ -8,9 +8,9 @@
 
 import UIKit
 
-class Builder: NSObject {
+final class BuilderExample {
 
-	func example() {
+	static func example() {
 		let cheapPhoneBuilder = LowPricePhoneBuilder()
 		let expensive = HighPricePhoneBuilder()
 		
@@ -30,20 +30,18 @@ class Builder: NSObject {
 		if let phone = probablyHighPhone {
 			print("Probably high phone", phone.name!, phone.cpuCodeName!, phone.launcher!, phone.osVersionCode!, phone.osVersion!)
 		}
-		
-		
-		
 	}
+
 }
 
-class AndroidPhone: NSObject {
-	
+final class AndroidPhone {
 	var osVersion, name, cpuCodeName, launcher : String?
 	var osVersionCode, RAMsize : Int?
-	
 }
 
 protocol AndroidPhoneBuilderProtocol {
+    var phone: AndroidPhone { get }
+
 	func getPhone() -> AndroidPhone
 	func setOsVersion()
 	func setOsVersionCode()
@@ -51,78 +49,75 @@ protocol AndroidPhoneBuilderProtocol {
 	func setCpuCodeName()
 	func setLauncher()
 	func setRAMsize()
-	
-	var phone : AndroidPhone {get}
-	
 }
 
-class LowPricePhoneBuilder: AndroidPhoneBuilderProtocol  {
+final class LowPricePhoneBuilder: AndroidPhoneBuilderProtocol  {
 	
 	let phone = AndroidPhone()
 	
 	func getPhone() -> AndroidPhone {
-		return self.phone
+		return phone
 	}
 	
 	func setOsVersion() {
-		self.phone.osVersion = "Android4.4"
+		phone.osVersion = "Android4.4"
 	}
 	
 	func setOsVersionCode() {
-		self.phone.osVersionCode = 4
+		phone.osVersionCode = 4
 	}
 	
 	func setName() {
-		self.phone.name = "Low price phone"
+		phone.name = "Low price phone"
 	}
 	
 	func setCpuCodeName() {
-		self.phone.cpuCodeName = "Some shitty CPU"
+		phone.cpuCodeName = "Some shitty CPU"
 	}
 	
 	func setLauncher() {
-		self.phone.launcher = "Hia Tsung!"
+		phone.launcher = "Hia Tsung!"
 	}
 	
 	func setRAMsize() {
-		self.phone.RAMsize = 32
+		phone.RAMsize = 32
 	}
 }
 
-class HighPricePhoneBuilder: AndroidPhoneBuilderProtocol  {
+final class HighPricePhoneBuilder: AndroidPhoneBuilderProtocol  {
 	
 	let phone = AndroidPhone()
 	
 	func getPhone() -> AndroidPhone {
-		return self.phone
+		return phone
 	}
 	
 	func setOsVersion() {
-		self.phone.osVersion = "Android8.8"
+		phone.osVersion = "Android8.8"
 	}
 	
 	func setOsVersionCode() {
-		self.phone.osVersionCode = 8
+		phone.osVersionCode = 8
 	}
 	
 	func setName() {
-		self.phone.name = "High price phone"
+		phone.name = "High price phone"
 	}
 	
 	func setCpuCodeName() {
-		self.phone.cpuCodeName = "Some the best CPU"
+		phone.cpuCodeName = "Some the best CPU"
 	}
 	
 	func setLauncher() {
-		self.phone.launcher = "Stive Jobs"
+		phone.launcher = "Stive Jobs"
 	}
 	
 	func setRAMsize() {
-		self.phone.RAMsize = 256
+		phone.RAMsize = 256
 	}
 }
 
-class FactorySalerMan: NSObject {
+final class FactorySalerMan {
 	var phoneBuilder : AndroidPhoneBuilderProtocol?
 	
 	func setPhoneBuilder(_ builder: AndroidPhoneBuilderProtocol) {
@@ -146,7 +141,6 @@ class FactorySalerMan: NSObject {
 			builder.setOsVersionCode()
 		}
 	}
-	
 }
 
 
