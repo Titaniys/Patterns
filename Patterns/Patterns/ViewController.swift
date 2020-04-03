@@ -13,15 +13,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-        let app = LoggisticApp()
-
-        app.example(distance: 900)
-        app.example(distance: 1100)
-        app.example(distance: 1000)
-
-        let interface = InterfaceExample()
-        interface.method()
-        interface.method()
+        Prototype.example()
 	}
 
 
