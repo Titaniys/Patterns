@@ -56,7 +56,15 @@ class HunterAdapter: BirdProtocol {
 
 }
 
+extension Raven: BirdProtocol {
+    func fly() {
+        kill()
+    }
 
+    func sing() {
+        shout()
+    }
+}
 
 
 
