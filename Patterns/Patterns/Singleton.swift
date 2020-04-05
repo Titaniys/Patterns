@@ -8,10 +8,23 @@
 
 import UIKit
 
-class Singleton: NSObject {
+final class Singleton {
 
-	static let singleton = Singleton()
-	
-	var name : String?
+    private static var sharedInstance: Singleton!
+
+    private let name: String
+
+    static func getSharedInstance() -> Singleton {
+        guard sharedInstance == nil else {
+            return sharedInstance
+        }
+        sharedInstance = Singleton()
+        return sharedInstance
+    }
+
+    private init() {
+        self.name = "singleton"
+    }
+    
 }
 
