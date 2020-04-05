@@ -8,20 +8,12 @@
 
 import UIKit
 
-class Adapter: NSObject {
-
-	func makeTheBirdTest(_ bird: BirdProtocol) {
-		bird.fly()
-		bird.sing()
-	}
-}
-
 protocol BirdProtocol {
 	func fly()
 	func sing()
 }
 
-class Bird: BirdProtocol {
+final class Bird: BirdProtocol {
 	func fly() {
 		print("Fly")
 	}
@@ -31,31 +23,37 @@ class Bird: BirdProtocol {
 	}
 }
 
-class Raven: NSObject {
-	func flySearchAndDestroy() {
+protocol Hunter {
+    func kill()
+    func shout()
+}
+
+final class Raven: Hunter {
+	func kill() {
 		print("I am flying and seak for killing!")
 	}
 	
-	func voice() {
+	func shout() {
 		print("Kaaaar-kaaaaar-kaaaaaaar!")
 	}
 }
 
-class RavenAdapter: BirdProtocol {
-	var raven = Raven()
-	
+class HunterAdapter: BirdProtocol {
+
+    private let hunter: Hunter
+
+    init(_ adaptee: Hunter) {
+        hunter = adaptee
+    }
+
 	func fly() {
-		raven.flySearchAndDestroy()
+		hunter.kill()
 	}
 	
 	func sing() {
-		raven.voice()
+		hunter.shout()
 	}
-	
-	func initWithRaven(_ adaptee: Raven) -> RavenAdapter {
-		raven = adaptee
-		return self
-	}
+
 }
 
 
