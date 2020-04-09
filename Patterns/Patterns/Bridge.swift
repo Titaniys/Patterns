@@ -8,29 +8,29 @@
 
 import UIKit
 
-class Bridge: NSObject {
+class Bridge {
 
 	static func example() {
 		
 		let chinaHeadphone = ChinaHeadphone()
 		let expensiveHeadphone = ExpensiveHeadphone()
 		
-		let musicPlayer = MusicPlayer()
-		musicPlayer.headphone = chinaHeadphone
-		musicPlayer.play()
-		
-		musicPlayer.headphone = expensiveHeadphone
-		musicPlayer.play()
+        let musicPlayerForBeach = MusicPlayer(headphones: chinaHeadphone)
+		musicPlayerForBeach.play()
+
+        let musicPlayerForRich = MusicPlayer(headphones: expensiveHeadphone)
+		musicPlayerForRich.play()
 		
 	}
 }
 
-protocol BaseHeadphone {
+protocol Headphones {
 	func playSimpleSound()
 	func playBassSound()
+    func stopSound()
 }
 
-class ChinaHeadphone: BaseHeadphone {
+final class ChinaHeadphone: Headphones {
 	func playBassSound() {
 		print("beep-beep-pffff")
 	}
@@ -38,9 +38,13 @@ class ChinaHeadphone: BaseHeadphone {
 	func playSimpleSound() {
 		print("bbf-bff-bbbppp")
 	}
+
+    func stopSound() {
+        print("bam")
+    }
 }
 
-class ExpensiveHeadphone: BaseHeadphone {
+final class ExpensiveHeadphone: Headphones {
 	func playBassSound() {
 		print("beep-beep-tapam-pam-pam")
 	}
@@ -48,18 +52,37 @@ class ExpensiveHeadphone: BaseHeadphone {
 	func playSimpleSound() {
 		print("BAM-BAM-BAM")
 	}
+
+    func stopSound() {
+        print("Silence")
+    }
 }
 
-class MusicPlayer: NSObject {
+protocol MusicPlayerProtocol {
+    var headphones: Headphones { get }
+
+    func play()
+    func stop()
+}
+
+final class MusicPlayer: MusicPlayerProtocol {
 	
-	var headphone : BaseHeadphone?
+	var headphones: Headphones
+
+    init(headphones: Headphones) {
+        self.headphones = headphones
+    }
 	
 	func play() {
-		headphone?.playSimpleSound()
-		headphone?.playBassSound()
-		headphone?.playSimpleSound()
-		headphone?.playBassSound()
+		headphones.playSimpleSound()
+		headphones.playBassSound()
+		headphones.playSimpleSound()
+		headphones.playBassSound()
 	}
+
+    func stop() {
+        headphones.stopSound()
+    }
 }
 
 
