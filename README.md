@@ -9,3 +9,4 @@ Common patterns on Swift
 - Adapter 
 - Bridge 
 - Facade
+- Composer

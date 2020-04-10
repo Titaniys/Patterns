@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol SectionViewModel {
-    associatedtype CellModels: CollectionViewModels
-    var sections: [CellModels] { get }
-}
-
-protocol CollectionViewModels {
-    var viewModels: [AnyObject] { get }
-}
-
-class TemplateCollectionViewController<ViewModel, CellModels: CollectionViewModels>: UIViewController, SectionViewModel {
-
-    var viewModel: ViewModel!
-    var sections: [CellModels]!
+//protocol SectionViewModel {
+//    associatedtype CellModels: CollectionViewModels
+//    var sections: [CellModels] { get }
+//}
+//
+//protocol CollectionViewModels {
+//    var viewModels: [AnyObject] { get }
+//}
+//
+//class TemplateCollectionViewController<ViewModel, CellModels: CollectionViewModels>: UIViewController, SectionViewModel {
+//
+//    var viewModel: ViewModel!
+//    var sections: [CellModels]!
 
 //
 //    init<ViewModelType: SectionViewModel>(_ viewModel: ViewModelType) where ViewModelType.ViewModel == ViewModel,
@@ -33,45 +33,45 @@ class TemplateCollectionViewController<ViewModel, CellModels: CollectionViewMode
 //        fatalError("init(coder:) has not been implemented")
 //    }
 
+//
+//}
+//
+//protocol TestProtocol {
+//    func test()
+//}
 
-}
-
-protocol TestProtocol {
-    func test()
-}
-
-class NewTemp: TemplateCollectionViewController<TestProtocol, BaseSection> {
-
-    var sections: [BaseSection]!
-    
-    func vaddr() -> [BaseSection] {
-        viewModel.test()
-        return []
-    }
-}
-
-enum BaseSection: CollectionViewModels {
-    case test
-
-    var viewModels: [AnyObject] {
-        switch self {
-        case .test:
-            return []
-        }
-    }
-}
-
-class BaseViewModel: SectionViewModel, TestProtocol {
-
-    func test() {
-
-    }
-
-    func getSections() -> [BaseSection] {
-        return []
-    }
-
-}
+//class NewTemp: TemplateCollectionViewController<TestProtocol, BaseSection> {
+//
+//    var sections: [BaseSection]!
+//
+//    func vaddr() -> [BaseSection] {
+//        viewModel.test()
+//        return []
+//    }
+//}
+//
+//enum BaseSection: CollectionViewModels {
+//    case test
+//
+//    var viewModels: [AnyObject] {
+//        switch self {
+//        case .test:
+//            return []
+//        }
+//    }
+//}
+//
+//class BaseViewModel: SectionViewModel, TestProtocol {
+//
+//    func test() {
+//
+//    }
+//
+//    func getSections() -> [BaseSection] {
+//        return []
+//    }
+//
+//}
 
 //class AnyViewModelBox<ViewModel, Section>: SectionViewModel {
 //    func getSections(for viewModel: ViewModel) -> [Section] {
