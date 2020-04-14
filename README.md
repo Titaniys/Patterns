@@ -10,3 +10,4 @@ Common patterns on Swift
 - Bridge 
 - Facade
 - Composer
+- Decorator (Wrapper)
