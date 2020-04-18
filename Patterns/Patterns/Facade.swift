@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Facade: NSObject {
+final class Facade {
 
 	static func example() {
 		let travelFacade = TravelSystemFacade()
@@ -16,25 +16,25 @@ class Facade: NSObject {
 	}
 }
 
-class PathFinder: NSObject {
+final class PathFinder {
 	
 	func findCurrentLocation()  {
 		print("Finding your location. Hmmm, here you are!")
 	}
 	
 	func findLocalToTravel(_ local: String) {
-		print("So you wanna travell to", local)
+		print("So you wanna travel to", local)
 	}
 	
 	func makeARoute() {
-		print("Okay, to travell to this location we are using google maps....")
+		print("Okay, to travel to this location we are using google maps....")
 	}
 }
 
-class TravelEngine: NSObject {
+final class TravelEngine {
 	
 	func findTransport() {
-		print("Okay, to travell there you will probabply need dragon!Arghhhhh")
+		print("Okay, to travel there you will probabply need dragon! Arghhhhh")
 	}
 	
 	func orderTransport()  {
@@ -46,32 +46,31 @@ class TravelEngine: NSObject {
 	}
 }
 
-class TicketPrintingSystem: NSObject {
-	
+final class TicketPrintingSystem {
 	func createTicket() {
-		print("Connecting to our ticketing system...")
+		print("Connecting to our ticket system...")
 	}
 	
 	func printingTicket() {
-		print("Hmmm, ticket for travelling on the green dragon.Interesting...")
+		print("Hmmm, ticket for traveling on the green dragon. Interesting...")
 	}
 }
 
-class TravelSystemFacade: NSObject {
+final class TravelSystemFacade {
 	
 	func travelToLocal(_ local: String) {
+
 		let pathFinder = PathFinder()
-		let travelEngine = TravelEngine()
-		let ticket = TicketPrintingSystem()
-		
 		pathFinder.findCurrentLocation()
 		pathFinder.findLocalToTravel(local)
 		pathFinder.makeARoute()
-		
+
+        let travelEngine = TravelEngine()
 		travelEngine.findTransport()
 		travelEngine.orderTransport()
 		travelEngine.travel()
-		
+
+        let ticket = TicketPrintingSystem()
 		ticket.createTicket()
 		ticket.printingTicket()
 	}
