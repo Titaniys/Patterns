@@ -11,3 +11,4 @@ Common patterns on Swift
 - Facade
 - Composer
 - Decorator (Wrapper)
+- Proxy

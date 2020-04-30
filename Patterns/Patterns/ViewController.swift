@@ -13,7 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Facade.example()
+        let storage: Storage = StorageImpl()
+        storage.read()
+        storage.write()
+
+        let proxy: Storage = StorageProxy(storage: storage)
+        proxy.read()
+        proxy.write()
     }
 }
 
