@@ -11,6 +11,7 @@
 		D38104822424FB30004AC823 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38104812424FB30004AC823 /* Interface.swift */; };
 		D3AA1946244B952200808B46 /* Flyweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA1945244B952200808B46 /* Flyweight.swift */; };
 		D3B6460A245B0BDD0018EB1A /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B64609245B0BDD0018EB1A /* Proxy.swift */; };
+		D3B6460F245B18040018EB1A /* ChainOfResponsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6460E245B18040018EB1A /* ChainOfResponsibility.swift */; };
 		D3F269FF2440BED7009300BD /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F269FE2440BED7009300BD /* Composite.swift */; };
 		D3F26A012440BF17009300BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D3F26A002440BF17009300BD /* README.md */; };
 		D3F26A0324462786009300BD /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F26A0224462786009300BD /* Decorator.swift */; };
@@ -35,6 +36,7 @@
 		D38104812424FB30004AC823 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 		D3AA1945244B952200808B46 /* Flyweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flyweight.swift; sourceTree = "<group>"; };
 		D3B64609245B0BDD0018EB1A /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
+		D3B6460E245B18040018EB1A /* ChainOfResponsibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainOfResponsibility.swift; sourceTree = "<group>"; };
 		D3F269FE2440BED7009300BD /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
 		D3F26A002440BF17009300BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D3F26A0224462786009300BD /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
@@ -67,6 +69,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3B6460B245B17B30018EB1A /* Generative */ = {
+			isa = PBXGroup;
+			children = (
+				DDA94C6B20CD6BC400289D95 /* Singleton.swift */,
+				DDA94C6920CC88A200289D95 /* Builder.swift */,
+				DDA94C6720CC2B5100289D95 /* AbstractFactory.swift */,
+				DDA94C6520CC079100289D95 /* FactoryMethod.swift */,
+				DDA94C6320CBFDCE00289D95 /* Prototype.swift */,
+			);
+			path = Generative;
+			sourceTree = "<group>";
+		};
+		D3B6460C245B17BF0018EB1A /* Structural */ = {
+			isa = PBXGroup;
+			children = (
+				DDA94C6F20CDC8EB00289D95 /* AdapterDifficult.swift */,
+				DDA94C6D20CD949500289D95 /* Adapter.swift */,
+				DDA94C7120CEC7FD00289D95 /* Bridge.swift */,
+				D3F269FE2440BED7009300BD /* Composite.swift */,
+				D3F26A0224462786009300BD /* Decorator.swift */,
+				DDA94C7320CED0DD00289D95 /* Facade.swift */,
+				D3AA1945244B952200808B46 /* Flyweight.swift */,
+				D3B64609245B0BDD0018EB1A /* Proxy.swift */,
+			);
+			path = Structural;
+			sourceTree = "<group>";
+		};
+		D3B6460D245B17C80018EB1A /* Behavioral */ = {
+			isa = PBXGroup;
+			children = (
+				D3B6460E245B18040018EB1A /* ChainOfResponsibility.swift */,
+			);
+			path = Behavioral;
+			sourceTree = "<group>";
+		};
 		DDA94C4520C9CF4600289D95 = {
 			isa = PBXGroup;
 			children = (
@@ -87,23 +124,13 @@
 		DDA94C5020C9CF4600289D95 /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				D3B6460B245B17B30018EB1A /* Generative */,
+				D3B6460C245B17BF0018EB1A /* Structural */,
+				D3B6460D245B17C80018EB1A /* Behavioral */,
 				DDA94C5320C9CF4600289D95 /* ViewController.swift */,
 				D3509CF4243CE2D200499622 /* TemplateCollectionViewController.swift */,
 				D38104812424FB30004AC823 /* Interface.swift */,
 				DDA94C5120C9CF4600289D95 /* AppDelegate.swift */,
-				DDA94C6320CBFDCE00289D95 /* Prototype.swift */,
-				DDA94C6520CC079100289D95 /* FactoryMethod.swift */,
-				DDA94C6720CC2B5100289D95 /* AbstractFactory.swift */,
-				DDA94C6920CC88A200289D95 /* Builder.swift */,
-				DDA94C6B20CD6BC400289D95 /* Singleton.swift */,
-				DDA94C6D20CD949500289D95 /* Adapter.swift */,
-				DDA94C6F20CDC8EB00289D95 /* AdapterDifficult.swift */,
-				DDA94C7120CEC7FD00289D95 /* Bridge.swift */,
-				D3F269FE2440BED7009300BD /* Composite.swift */,
-				D3F26A0224462786009300BD /* Decorator.swift */,
-				DDA94C7320CED0DD00289D95 /* Facade.swift */,
-				D3AA1945244B952200808B46 /* Flyweight.swift */,
-				D3B64609245B0BDD0018EB1A /* Proxy.swift */,
 				DDA94C5520C9CF4600289D95 /* Main.storyboard */,
 				DDA94C5820C9CF4800289D95 /* Assets.xcassets */,
 				DDA94C5A20C9CF4800289D95 /* LaunchScreen.storyboard */,
@@ -192,6 +219,7 @@
 				DDA94C6C20CD6BC400289D95 /* Singleton.swift in Sources */,
 				DDA94C5220C9CF4600289D95 /* AppDelegate.swift in Sources */,
 				DDA94C7420CED0DD00289D95 /* Facade.swift in Sources */,
+				D3B6460F245B18040018EB1A /* ChainOfResponsibility.swift in Sources */,
 				DDA94C6820CC2B5100289D95 /* AbstractFactory.swift in Sources */,
 				DDA94C6420CBFDCE00289D95 /* Prototype.swift in Sources */,
 				DDA94C6620CC079100289D95 /* FactoryMethod.swift in Sources */,
