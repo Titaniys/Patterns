@@ -12,6 +12,7 @@
 		D3AA1946244B952200808B46 /* Flyweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA1945244B952200808B46 /* Flyweight.swift */; };
 		D3B6460A245B0BDD0018EB1A /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B64609245B0BDD0018EB1A /* Proxy.swift */; };
 		D3B6460F245B18040018EB1A /* ChainOfResponsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6460E245B18040018EB1A /* ChainOfResponsibility.swift */; };
+		D3E685FF2490D3DC00106128 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E685FE2490D3DC00106128 /* Command.swift */; };
 		D3F269FF2440BED7009300BD /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F269FE2440BED7009300BD /* Composite.swift */; };
 		D3F26A012440BF17009300BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D3F26A002440BF17009300BD /* README.md */; };
 		D3F26A0324462786009300BD /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F26A0224462786009300BD /* Decorator.swift */; };
@@ -37,6 +38,7 @@
 		D3AA1945244B952200808B46 /* Flyweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flyweight.swift; sourceTree = "<group>"; };
 		D3B64609245B0BDD0018EB1A /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
 		D3B6460E245B18040018EB1A /* ChainOfResponsibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainOfResponsibility.swift; sourceTree = "<group>"; };
+		D3E685FE2490D3DC00106128 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		D3F269FE2440BED7009300BD /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
 		D3F26A002440BF17009300BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D3F26A0224462786009300BD /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B6460E245B18040018EB1A /* ChainOfResponsibility.swift */,
+				D3E685FE2490D3DC00106128 /* Command.swift */,
 			);
 			path = Behavioral;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				D3F26A0324462786009300BD /* Decorator.swift in Sources */,
 				D3B6460A245B0BDD0018EB1A /* Proxy.swift in Sources */,
 				DDA94C6A20CC88A200289D95 /* Builder.swift in Sources */,
+				D3E685FF2490D3DC00106128 /* Command.swift in Sources */,
 				D3AA1946244B952200808B46 /* Flyweight.swift in Sources */,
 				D38104822424FB30004AC823 /* Interface.swift in Sources */,
 				D3F269FF2440BED7009300BD /* Composite.swift in Sources */,

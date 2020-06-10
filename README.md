@@ -18,3 +18,4 @@ Common patterns on Swift
     
     Behavioral patterns
 - Chain of responsibility
+- Command
