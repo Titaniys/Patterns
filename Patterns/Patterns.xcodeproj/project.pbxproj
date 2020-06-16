@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D3509CF5243CE2D200499622 /* TemplateCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3509CF4243CE2D200499622 /* TemplateCollectionViewController.swift */; };
 		D38104822424FB30004AC823 /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38104812424FB30004AC823 /* Interface.swift */; };
+		D3838A4E2499065500A22322 /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3838A4D2499065500A22322 /* Iterator.swift */; };
 		D3AA1946244B952200808B46 /* Flyweight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AA1945244B952200808B46 /* Flyweight.swift */; };
 		D3B6460A245B0BDD0018EB1A /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B64609245B0BDD0018EB1A /* Proxy.swift */; };
 		D3B6460F245B18040018EB1A /* ChainOfResponsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6460E245B18040018EB1A /* ChainOfResponsibility.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		D3509CF4243CE2D200499622 /* TemplateCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCollectionViewController.swift; sourceTree = "<group>"; };
 		D38104812424FB30004AC823 /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		D3838A4D2499065500A22322 /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
 		D3AA1945244B952200808B46 /* Flyweight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flyweight.swift; sourceTree = "<group>"; };
 		D3B64609245B0BDD0018EB1A /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
 		D3B6460E245B18040018EB1A /* ChainOfResponsibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainOfResponsibility.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				D3B6460E245B18040018EB1A /* ChainOfResponsibility.swift */,
 				D3E685FE2490D3DC00106128 /* Command.swift */,
+				D3838A4D2499065500A22322 /* Iterator.swift */,
 			);
 			path = Behavioral;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				DDA94C7220CEC7FD00289D95 /* Bridge.swift in Sources */,
 				DDA94C5420C9CF4600289D95 /* ViewController.swift in Sources */,
 				DDA94C7020CDC8EB00289D95 /* AdapterDifficult.swift in Sources */,
+				D3838A4E2499065500A22322 /* Iterator.swift in Sources */,
 				DDA94C6E20CD949500289D95 /* Adapter.swift in Sources */,
 				D3509CF5243CE2D200499622 /* TemplateCollectionViewController.swift in Sources */,
 				DDA94C6C20CD6BC400289D95 /* Singleton.swift in Sources */,
