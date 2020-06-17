@@ -20,3 +20,4 @@ Common patterns on Swift
 - Chain of responsibility
 - Command
 - Iterator
+- Mediator
